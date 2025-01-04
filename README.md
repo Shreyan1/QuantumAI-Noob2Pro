@@ -44,10 +44,10 @@ Building an OpenSource repo for guiding NOOBS --to-> PRO in QuantumAI 🚀
 
 ### What to read/ study for this ? 🤓
 #### Foundational Papers to Study : 📑
-1. The Road to Quantum Artificial Intelligence - https://arxiv.org/ftp/arxiv/papers/0705/0705.3360.pdf
-2. Quantum Neuron: an elementary building block for machine learning on quantum computers : https://arxiv.org/pdf/1711.11240
-3. Quantum algorithms for supervised and unsupervised machine learning - https://arxiv.org/pdf/1307.0411
-4. Quantum Artificial Intelligence: A Brief Survey - https://arxiv.org/pdf/2408.10726
+1. [The Road to Quantum Artificial Intelligence]https://arxiv.org/ftp/arxiv/papers/0705/0705.3360.pdf
+2. [Quantum Neuron: an elementary building block for machine learning on quantum computers]https://arxiv.org/pdf/1711.11240
+3. [Quantum algorithms for supervised and unsupervised machine learning]https://arxiv.org/pdf/1307.0411
+4. [Quantum Artificial Intelligence: A Brief Survey]https://arxiv.org/pdf/2408.10726
 
 #### Books and Materials : 📚
 1. Quantum Machine Learning Book by S Pattanayak - Get this book from this repo.
