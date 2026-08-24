@@ -9,7 +9,21 @@ Building an OpenSource repo for guiding NOOBS --to-> PRO in QuantumAI 🚀
 - Basic idea about Quantum Mechanics
 
 ---
+### 🛠️ Setup
+
+```bash
+python -m venv .quantumvenv
+source .quantumvenv/bin/activate      # Windows: .quantumvenv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Every notebook in this repo runs end to end on a laptop - no quantum hardware needed.
+
+---
+
 ### How to proceed with this repository ? 🤔
+
+🗺️ **New here? Start with the [ROADMAP](ROADMAP.md)** - it explains the order the problems are meant to be read in, roughly how long each stage takes, and the question each stage is answering.
 
 ➡️ **Read the `0-ReadFIRST.ipynb` to understand the required terminolgies that you will be encountering in the listed problems.**
 
@@ -35,7 +49,23 @@ Building an OpenSource repo for guiding NOOBS --to-> PRO in QuantumAI 🚀
 
 - **Problem 9.1 :** Quantum Support Vector Machine (QSVM) - Application of QSVM on Iris Dataset
 
-- **Problem 9.2 :** Quantum Support Vector Machine (QSVM) - Application of QSVM with PennyLane.
+- **Problem 9.2 :** Quantum Support Vector Machine (QSVM) - Application of QSVM with PennyLane, and what actually makes something a kernel.
+
+- **Problem 10 :** Variational Quantum Classifier (VQC) - The first model here that genuinely *trains*. The hybrid quantum-classical loop and the parameter-shift rule.
+
+- **Problem 11 :** Quantum Neural Networks in Qiskit - The same model built with `EstimatorQNN` and `VQC`, trained with a gradient-free optimizer.
+
+- **Problem 12 :** Barren Plateaus - Measure for yourself why gradients vanish exponentially with qubit count, and why bigger quantum models are *worse*.
+
+- **Problem 13 :** Data Re-uploading Classifier - The fix. A **single qubit** beats the two-qubit model of Problem 10.
+
+- **Problem 14 :** Noise and Error Mitigation - Realistic noise models, readout error mitigation with a calibration matrix, and zero-noise extrapolation.
+
+- **Problem 15 :** Variational Quantum Eigensolver (VQE) - Compute the ground state energy and full dissociation curve of the H₂ molecule.
+
+- **Problem 16 :** QAOA - Solve MaxCut, and see how combinatorial optimization becomes a ground-state problem.
+
+- **Problem 17 :** Grover's Algorithm - A *provable* O(√N) speedup, and the amplitude amplification primitive behind most QML speedup claims.
 
 
 < List will be updated as added >
@@ -48,6 +78,13 @@ Building an OpenSource repo for guiding NOOBS --to-> PRO in QuantumAI 🚀
 2. [Quantum Neuron: an elementary building block for machine learning on quantum computers](https://arxiv.org/pdf/1711.11240)
 3. [Quantum algorithms for supervised and unsupervised machine learning](https://arxiv.org/pdf/1307.0411)
 4. [Quantum Artificial Intelligence: A Brief Survey](https://arxiv.org/pdf/2408.10726)
+
+#### Papers behind Problems 10 - 17 : 📄
+5. [Barren plateaus in quantum neural network training landscapes](https://www.nature.com/articles/s41467-018-07090-6) - *Problem 12*
+6. [Data re-uploading for a universal quantum classifier](https://quantum-journal.org/papers/q-2020-02-06-226/) - *Problem 13*
+7. [A variational eigenvalue solver on a photonic quantum processor](https://www.nature.com/articles/ncomms5213) - *Problem 15*
+8. [A Quantum Approximate Optimization Algorithm](https://arxiv.org/abs/1411.4028) - *Problem 16*
+9. [A fast quantum mechanical algorithm for database search](https://arxiv.org/abs/quant-ph/9605043) - *Problem 17*
 
 #### Books and Materials : 📚
 1. Quantum Machine Learning Book by S Pattanayak - Get this book from this repo.
