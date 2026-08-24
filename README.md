@@ -23,6 +23,8 @@ Every notebook in this repo runs end to end on a laptop - no quantum hardware ne
 
 ### How to proceed with this repository ? 🤔
 
+🏋️ **Want to practise?** [PRACTICE.md](PRACTICE.md) has **38 unsolved problems** across four tiers - Beginner, Amateur, Semi-Pro and Pro - each with a hint, references, and a checkable "done when".
+
 🗺️ **New here? Start with the [ROADMAP](ROADMAP.md)** - it explains the order the problems are meant to be read in, roughly how long each stage takes, and the question each stage is answering.
 
 ➡️ **Read the `0-ReadFIRST.ipynb` to understand the required terminolgies that you will be encountering in the listed problems.**
@@ -67,6 +69,16 @@ Every notebook in this repo runs end to end on a laptop - no quantum hardware ne
 
 - **Problem 17 :** Grover's Algorithm - A *provable* O(√N) speedup, and the amplitude amplification primitive behind most QML speedup claims.
 
+---
+
+##### 🌍 Real-world problems - does any of this actually work ?
+
+- **Problem 18 :** Real data, head to head - Breast cancer diagnosis with tuned classical ML vs a tuned quantum kernel, scored on accuracy *and* wall-clock time. **Classical wins**, and the best quantum kernel turns out to be the one with no entanglement.
+
+- **Problem 19 :** Where quantum actually wins - On quantum-generated data the quantum kernel hits **100%** while five tuned classical models top out at 80%, and the gap *widens* with qubit count.
+
+- **Problem 20 :** Should you use quantum ML? - A validated decision procedure: centered kernel-target alignment, geometric difference, learning curves and a hardware cost estimate. Tested against the known answers from Problems 18 and 19.
+
 
 < List will be updated as added >
 
@@ -79,12 +91,14 @@ Every notebook in this repo runs end to end on a laptop - no quantum hardware ne
 3. [Quantum algorithms for supervised and unsupervised machine learning](https://arxiv.org/pdf/1307.0411)
 4. [Quantum Artificial Intelligence: A Brief Survey](https://arxiv.org/pdf/2408.10726)
 
-#### Papers behind Problems 10 - 17 : 📄
+#### Papers behind Problems 10 - 20 : 📄
 5. [Barren plateaus in quantum neural network training landscapes](https://www.nature.com/articles/s41467-018-07090-6) - *Problem 12*
 6. [Data re-uploading for a universal quantum classifier](https://quantum-journal.org/papers/q-2020-02-06-226/) - *Problem 13*
 7. [A variational eigenvalue solver on a photonic quantum processor](https://www.nature.com/articles/ncomms5213) - *Problem 15*
 8. [A Quantum Approximate Optimization Algorithm](https://arxiv.org/abs/1411.4028) - *Problem 16*
 9. [A fast quantum mechanical algorithm for database search](https://arxiv.org/abs/quant-ph/9605043) - *Problem 17*
+10. [Supervised learning with quantum-enhanced feature spaces](https://www.nature.com/articles/s41586-019-0980-3) - *Problem 19*
+11. [Power of data in quantum machine learning](https://www.nature.com/articles/s41467-021-22539-9) - *Problem 20*
 
 #### Books and Materials : 📚
 1. Quantum Machine Learning Book by S Pattanayak - Get this book from this repo.

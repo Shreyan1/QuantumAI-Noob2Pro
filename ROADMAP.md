@@ -7,6 +7,9 @@ miss the argument they are making together.
 > **How to use this page :** find the stage that matches where you are, do the notebooks in order,
 > and do not skip the `#### TASK :` sections at the bottom of each one. That is where the learning
 > actually happens.
+>
+> When you want to test yourself away from the notebooks, [PRACTICE.md](PRACTICE.md) has 38 unsolved
+> problems tiered Beginner → Pro, cross-referenced to the stages below.
 
 ---
 
@@ -21,8 +24,9 @@ miss the argument they are making together.
 | 4. Trainable Quantum Models | `10` - `13` | 8-10 hrs | train variational circuits, and know why they fail |
 | 5. Reality Check | `14` | 3-4 hrs | run on noisy hardware and mitigate the damage |
 | 6. Beyond Classification | `15` - `17` | 6-8 hrs | chemistry, optimization, and provable speedups |
+| 7. Real-World Problems | `18` - `20` | 6-8 hrs | judge, honestly, whether quantum helps on *your* data |
 
-Roughly **30-45 hours** end to end at a comfortable pace.
+Roughly **36-55 hours** end to end at a comfortable pace.
 
 ---
 
@@ -161,6 +165,34 @@ Ansatz design and qubit count are secondary.
 
 ---
 
+## Stage 7 · Real-World Problems, and the Honest Verdict 🌍
+*The question : forget the toys. On a real problem, does any of this actually beat scikit-learn?*
+
+**This is the stage that turns you from someone who can run a quantum classifier into someone who
+can tell whether the result means anything.** Do all three, in order - 18 and 19 reach opposite
+conclusions on purpose, and 20 is what resolves them.
+
+| Notebook | Concept | The idea to take away |
+|---|---|---|
+| `18-Problem18` | Breast cancer: classical vs quantum | **Classical wins** - ~96% in 1 ms vs ~95% in 12 s. The best quantum kernel has *zero* entangling gates |
+| `19-Problem19` | Quantum-native data | **Quantum wins** - 100% vs 80% for five tuned classical models, and the gap grows with qubit count |
+| `20-Problem20` | Should you use quantum ML? | A decision procedure - alignment, geometric difference, learning curves, hardware cost - **validated against 18 and 19** |
+
+**The resolution :** quantum models win on **quantum-structured data** and lose on
+classically-structured data. That is a sharp, predictive rule, and Problem 20 turns it into
+something you can measure on a dataset you have never seen before.
+
+**Checkpoint :**
+- Why did PCA have to run *before* the quantum model in Problem 18 - and what did that cost?
+- Why is a `z_feature_map` kernel with no entanglement barely "quantum" at all?
+- Problem 19's quantum kernel matched the feature map that generated the data. Why does that make
+  the win real but narrow?
+- Why must you **center** a kernel before computing target alignment? *(In Problem 20 the uncentered
+  version gets the answer backwards.)*
+- Why is a large geometric difference **necessary but not sufficient** for quantum advantage?
+
+---
+
 ## 🧭 Three threads running through the whole repo
 
 Once you have finished, these are the three things worth remembering.
@@ -172,8 +204,14 @@ map. It sets what your model can express; nothing downstream can add what the en
 (Problem 12). Every technique that works - re-uploading, UCCSD, the QAOA ansatz - works because it
 builds in structure you already knew about.
 
-**3. Always run the classical baseline.** Problem 9.2 makes this explicit and it applies everywhere.
-"96% accuracy" means nothing without "and scikit-learn gets 96% in 40 milliseconds".
+**3. Always run the classical baseline.** Problem 9.2 makes this explicit, Problems 18-20 make it
+the whole point, and it applies everywhere. "96% accuracy" means nothing without "and scikit-learn
+gets 96% in 40 milliseconds".
+
+**A fourth, earned by the end :** most honest results in this field are negative, and the negative
+results are the map. Problem 18 tells you where not to look. Problem 19 tells you where to look.
+Problem 12 tells you which failure mode to design around. Knowing the difference between a genuine
+advantage and a rigged demo is the actual pro skill.
 
 ---
 
@@ -199,6 +237,10 @@ Once you have finished this repo, these are the natural next steps :
 - [PennyLane plugins](https://pennylane.ai/plugins/) - AWS Braket, IonQ, Rigetti and more
 - Start with Problem 3 (a Bell state) and compare the counts to your simulator run. Then re-read
   Problem 14.
+
+**Practise**
+[PRACTICE.md](PRACTICE.md) - 38 unsolved problems, Beginner through Pro. Several of the Pro ones are
+open enough that a good writeup would be worth sharing.
 
 **Contribute**
 New problems, fixes and better explanations are all welcome - open a PR. 🤝
